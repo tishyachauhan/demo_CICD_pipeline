@@ -1,0 +1,10 @@
+# connects render to github 
+
+services:
+  - type: web
+    name: ml-flask-api-iris
+    env: python
+    plan: free
+    buildcommand: "pip install -r requirements.txt"
+    startcommand: "gunicorn app:app --bind 0.0.0.0:$PORT"  # :app is out file app.py and app: is flask object app
+    autodeploy:false  # we will trigger deploye via github actions

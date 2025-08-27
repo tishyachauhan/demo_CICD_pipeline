@@ -1,3 +1,8 @@
+# newly added for render 
+flask 
+gunicorn
+
+numpy 
 pandas 
 scikit-learn
 joblib
